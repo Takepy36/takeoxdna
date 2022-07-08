@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 438, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 425, in main
+    make_output(data, output_folder, output_ATGC_folder)
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 389, in make_output
+    res = p.map(eval, range(head_index, end_index))
+TypeError: 'NoneType' object cannot be interpreted as an integer

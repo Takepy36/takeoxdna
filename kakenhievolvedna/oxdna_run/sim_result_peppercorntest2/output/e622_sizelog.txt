@@ -1,0 +1,2 @@
+id,cube,convex hull,expected_number_of_strands,actual_number_of_strands
+622,46.7052552412591,8.23712073812963,12,1
