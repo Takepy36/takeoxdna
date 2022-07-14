@@ -1,6 +1,6 @@
 #!/bin/bash
 
-configFile=${1:-}
+configFile=${1:-}#conf file is here
 executionMode=${2:-"normal"}
 memoryLimit=60G
 #resultsPath=$(pwd)/results
@@ -14,6 +14,8 @@ confPathInContainer=/home/user/kakenhievolvedna/conf
 
 if [ ! -d $finalresultsPath ]; then
     mkdir -p $finalresultsPath
+    cp $confPath/$configFile $finalresultsPath
+    #result dir is created
 fi
 
 inDockerGroup=`id -Gn | grep docker`
