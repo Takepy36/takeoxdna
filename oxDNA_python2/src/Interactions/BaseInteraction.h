@@ -13,7 +13,6 @@
 #include <vector>
 #include <iostream>
 
-
 #include "../defs.h"
 #include "../Particles/BaseParticle.h"
 #include "../Boxes/BaseBox.h"
@@ -40,17 +39,18 @@ protected:
 
 	/// This is useful for "hard" potentials
 	bool _is_infinite;
-
 	/// This are needed to create initial configurations, and they are used by the generator functions
 	number _energy_threshold, _temperature;
+
 	/// If true, the generation of the initial configuration will try to take into account the fact that particles that are bonded neighbours should be close to each other
 	bool _generate_consider_bonded_interactions;
 	/// This controls the maximum at which bonded neighbours should be randomly placed to speed-up generation. Used by generator functions.
 	number _generate_bonded_cutoff;
-
+	
 	number _rcut, _sqr_rcut;
 
 	char _topology_filename[256];
+
 public:
 	IBaseInteraction();
 	virtual ~IBaseInteraction();
@@ -231,21 +231,23 @@ IBaseInteraction<number>::~IBaseInteraction() {
 
 template<typename number>
 void IBaseInteraction<number>::get_settings(input_file &inp) {
-	OX_LOG(Logger::LOG_INFO, "BaseInteraction get_settings 1 _int_map first");
 
+	OX_LOG(Logger::LOG_INFO, "get_settings(input_file &inp) 定義");
 	getInputString(&inp, "topology", this->_topology_filename, 1);
-	OX_LOG(Logger::LOG_INFO, "BaseInteraction get_settings 2 _int_map first");
+	//OX_LOG(Logger::LOG_INFO, "getInputString comment outed");
+	OX_LOG(Logger::LOG_INFO, "getInputString %s", this->_topology_filename);
 	getInputNumber(&inp, "energy_threshold", &_energy_threshold, 0);
-	OX_LOG(Logger::LOG_INFO, "BaseInteraction get_settings 3 _int_map first");
+	OX_LOG(Logger::LOG_INFO, "energy_threshold %p", &_energy_threshold);
+	OX_LOG(Logger::LOG_INFO, "energy_threshold %d", _energy_threshold);
 	getInputNumber(&inp, "T", &_temperature, 1);
-	OX_LOG(Logger::LOG_INFO, "BaseInteraction get_settings 4 _int_map first");
+	OX_LOG(Logger::LOG_INFO, "&_temperature %d", _temperature);
 	getInputBool(&inp, "generate_consider_bonded_interactions", &_generate_consider_bonded_interactions, 0);
-	OX_LOG(Logger::LOG_INFO, "BaseInteraction get_settings 5 _int_map first");
+	OX_LOG(Logger::LOG_INFO, "_generate_consider_bonded_interactions %d", _generate_consider_bonded_interactions);
 	if(_generate_consider_bonded_interactions) {
 		getInputNumber (&inp, "generate_bonded_cutoff", &_generate_bonded_cutoff, 0);
 		OX_LOG(Logger::LOG_INFO, "The generator will try to take into account bonded interactions by choosing distances between bonded neighbours no larger than %lf", _generate_bonded_cutoff);
 	}
-	OX_LOG(Logger::LOG_INFO, "BaseInteraction get_settings 6 _int_map first");
+	OX_LOG(Logger::LOG_INFO, "IBaseInteraction<number>::get_settings end");
 }
 
 template<typename number>
@@ -401,6 +403,7 @@ void IBaseInteraction<number>::generate_random_configuration(BaseParticle<number
 template <typename number, typename child>
 class BaseInteraction : public IBaseInteraction<number> {
 	typedef std::map<int, number (child::*)(BaseParticle<number> *p, BaseParticle<number> *q, LR_vector<number> *r, bool update_forces)> interaction_map;
+	
 
 private:
 
@@ -552,6 +555,15 @@ map<int, number> BaseInteraction<number, child>::get_system_energy_split(BasePar
     int i = 0;
 	OX_LOG(Logger::LOG_INFO, "this Interaction _int_map size %d", this->_int_map.size());
 	OX_LOG(Logger::LOG_INFO, "BaseInteraction _int_map size %d", _int_map.size());
+	//bug occured
+	//_int_mapがうまく作られていない。
+	
+	if (_int_map.begin()->first != NULL) {
+        cout << "Valid pointer!" << endl;
+    } else {
+        cout << "NULL pointer!" << endl;
+    }//debug
+
 	OX_LOG(Logger::LOG_INFO, "_int_map first %d", this->_int_map.begin()->first);
 
 	
@@ -559,14 +571,10 @@ map<int, number> BaseInteraction<number, child>::get_system_energy_split(BasePar
 		OX_LOG(Logger::LOG_INFO, "for(typename interaction_map::iterator・・・ start　%s",typeid(it).name());
 		OX_LOG(Logger::LOG_INFO, "this type　%s",typeid(this).name());
 		OX_LOG(Logger::LOG_INFO, "it->first value %d",i);
-		//if (it == nullptr) {
-		//	OX_LOG(Logger::LOG_INFO, "ptr {it} is null");
-		//}
-		int name = i;//it->first;
+		int name = it->first;
 		OX_LOG(Logger::LOG_INFO, "int name = it->first;");
 		energy_map[name] = (number) 0.f;
 		OX_LOG(Logger::LOG_INFO, "energy_map[name] = (number) 0.f; end");
-		i++; //
 		OX_LOG(Logger::LOG_INFO, "i++");
 	}
 	OX_LOG(Logger::LOG_INFO, "for(typename interaction_map::・・・ end");

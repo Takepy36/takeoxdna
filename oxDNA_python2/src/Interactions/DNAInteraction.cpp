@@ -13,9 +13,17 @@ DNAInteraction<number>::DNAInteraction() : BaseInteraction<number, DNAInteractio
 	this->_int_map[HYDROGEN_BONDING] = &DNAInteraction<number>::_hydrogen_bonding;
 	this->_int_map[CROSS_STACKING] = &DNAInteraction<number>::_cross_stacking;
 	this->_int_map[COAXIAL_STACKING] = &DNAInteraction<number>::_coaxial_stacking;
-    OX_LOG(Logger::LOG_INFO, "DNAInteraction constructor _int_map size %d", this->_int_map.size());
+	OX_LOG(Logger::LOG_INFO, "BACKBONE %d",this->_int_map[BACKBONE]);
+	OX_LOG(Logger::LOG_INFO, "BONDED_EXCLUDED_VOLUME %d",this->_int_map[BONDED_EXCLUDED_VOLUME]);
+	OX_LOG(Logger::LOG_INFO, "STACKING %d",this->_int_map[STACKING]);
+	OX_LOG(Logger::LOG_INFO, "NONBONDED_EXCLUDED_VOLUME %d",this->_int_map[NONBONDED_EXCLUDED_VOLUME]);
+	OX_LOG(Logger::LOG_INFO, "HYDROGEN_BONDING %d",this->_int_map[HYDROGEN_BONDING]);
+	OX_LOG(Logger::LOG_INFO, "CROSS_STACKING %d",this->_int_map[CROSS_STACKING]);
+	OX_LOG(Logger::LOG_INFO, "COAXIAL_STACKING %d",this->_int_map[COAXIAL_STACKING]);
+
+    //OX_LOG(Logger::LOG_INFO, "DNAInteraction constructor _int_map size %d", this->_int_map.size());
 	
-	OX_LOG(Logger::LOG_INFO, "DNAInteraction constructor _int_map first %d", this->_int_map.begin()->first);
+	//OX_LOG(Logger::LOG_INFO, "DNAInteraction constructor _int_map first %d", this->_int_map.begin()->first);
 
 	F1_A[0] = HYDR_A;
 	F1_A[1] = STCK_A;
@@ -231,11 +239,12 @@ DNAInteraction<number>::~DNAInteraction() {
 
 template<typename number>
 void DNAInteraction<number>::get_settings(input_file &inp) {
-	//OX_LOG(Logger::LOG_INFO, "DNAInteraction get_settings start _int_map first %d", this->_int_map.begin()->first);
+	OX_LOG(Logger::LOG_INFO, "DNAInteraction get_settings start _int_map first %d", this->_int_map.begin()->first);
 
-	IBaseInteraction<number>::get_settings(inp);
+	IBaseInteraction<number>::get_settings(inp);//bug occured ? 
 
-	OX_LOG(Logger::LOG_INFO, "DNAInteraction get_settings 2 _int_map first %s", this->_int_map.begin());
+	OX_LOG(Logger::LOG_INFO, "DNAInteraction get_settings start _int_map first %d", this->_int_map.begin()->first);
+
 
 	int avg_seq;
 	if(getInputInt(&inp, "use_average_seq", &avg_seq, 0) == KEY_FOUND) {

@@ -17,7 +17,7 @@ RUN pip install --upgrade cython && pip3 install --upgrade cython
 
 # Install peppercorn
 RUN \
-    pip install mpmath==0.19 numpy scipy sympy==1.2 networkx matplotlib==2.2.4 && \
+    pip install mpmath==0.19 numpy pybind11 scipy sympy==1.2 networkx matplotlib==2.2.4 && \
     pip3 install tqdm colorama psutil parse powerlaw networkx matplotlib==2.2.4 seaborn graphviz pydot && \
     pip3 install -U qdpy==0.1.0 && \
     git clone https://github.com/leo-cazenille/peppercornenumerator.git && \
