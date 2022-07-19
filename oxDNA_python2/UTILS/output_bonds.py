@@ -56,7 +56,7 @@ launchargs = [PROCESSPROGRAM,inputfile ,'trajectory_file='+tempfile_obj.name,com
 #print command_for_data
 #launchargs = [PROCESSPROGRAM,inputfile ,'trajectory_file='+conffile,command_for_data]
 
-print  "mysystem:\n"
+#print  "mysystem:\n"
 print  mysystem
 while mysystem != False:
 	mysystem.map_nucleotides_to_strands()
@@ -68,8 +68,8 @@ while mysystem != False:
 	if counter == confid:
 		myinput = subprocess.Popen(launchargs,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		mystdout,mystderr = myinput.communicate()
-		print >> sys.stderr, "mystderr : ", mystderr
-		print >> sys.stdout, "mystdout : ", mystdout
+		#print >> sys.stderr, "mystderr : ", mystderr
+		#print >> sys.stdout, "mystdout : ", mystdout
 		sys.exit(1)
 	counter += 1
 	mysystem = myreader.get_system()

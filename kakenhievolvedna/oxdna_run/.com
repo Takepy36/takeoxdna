@@ -76,9 +76,6 @@ bond #0:72
 bond #0:73
 bond #0:74
 bond #0:75
-bond #0:76
-bond #0:77
-bond #0:78
 bond #0:1.A,0.A
 bond #0:2.A,1.A
 bond #0:3.A,2.A
@@ -103,8 +100,8 @@ bond #0:21.A,20.A
 bond #0:22.A,21.A
 bond #0:23.A,22.A
 bond #0:24.A,23.A
-bond #0:25.A,24.A
 bond #0:26.A,25.A
+bond #0:27.A,26.A
 bond #0:28.A,27.A
 bond #0:29.A,28.A
 bond #0:30.A,29.A
@@ -128,9 +125,9 @@ bond #0:47.A,46.A
 bond #0:48.A,47.A
 bond #0:49.A,48.A
 bond #0:50.A,49.A
-bond #0:51.A,50.A
 bond #0:52.A,51.A
 bond #0:53.A,52.A
+bond #0:54.A,53.A
 bond #0:55.A,54.A
 bond #0:56.A,55.A
 bond #0:57.A,56.A
@@ -152,9 +149,6 @@ bond #0:72.A,71.A
 bond #0:73.A,72.A
 bond #0:74.A,73.A
 bond #0:75.A,74.A
-bond #0:76.A,75.A
-bond #0:77.A,76.A
-bond #0:78.A,77.A
 preset apply int ribbons
 set bg_color white
 color sandy brown #0:ALA
