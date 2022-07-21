@@ -31,6 +31,9 @@ if len(files) >2:
     output = files[2]
 else: output = files[0] + ".pdb"
 
+base.Logger.log("chimera debag :  '%s'" % output, base.Logger.INFO)
+
+
 l = readers.LorenzoReader(files[0], files[1])
 s = l.get_system()
 cdm20 = True
@@ -99,7 +102,7 @@ while s:
             strand.translate (-cdm)
 
 # def print_pdb_output_chimera(self,filename,append=False, visibility=None, domain=[],colour_by_seq=False):
-
+    print("debag output : ", output)
     s.print_pdb_output_chimera(output, append=append, domain=domain,colour_by_seq=colour_by_seq)
     s = l.get_system()
     append = True

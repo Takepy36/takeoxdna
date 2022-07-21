@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[60]:
 
 
 import pandas as pd
@@ -15,7 +15,7 @@ pd.set_option('display.max_columns', None)
 import config as cfg
 
 
-# In[2]:
+# In[61]:
 
 
 def run_output_bonds (target, output_oxdna_dir, oxdna_utils_dir = "../../oxDNA_python2/UTILS",output_bonds = "output_bonds.py"):
@@ -31,7 +31,7 @@ def run_output_bonds (target, output_oxdna_dir, oxdna_utils_dir = "../../oxDNA_p
     return output_filename
 
 
-# In[3]:
+# In[62]:
 
 
 def get_bonds_data(filename):
@@ -43,7 +43,7 @@ def get_bonds_data(filename):
     return output_bonds_data
 
 
-# In[4]:
+# In[63]:
 
 
 def get_lastconf_data(output_dir, target):
@@ -53,20 +53,20 @@ def get_lastconf_data(output_dir, target):
     return lastconf_data
 
 
-# In[5]:
+# In[64]:
 
 
 def get_topology_data(output_dir, target): 
-   topology = os.path.join(output_dir, "{}.top".format(target))
-   topology_data = pd.read_csv(topology, sep = " ", names = ["strand", "nucleotide", "connection1", "connection2"])
-   topology_data = topology_data.drop([0]).reset_index(drop = True)
-   topology_data = topology_data.reset_index()
-   topology_data = topology_data.rename(columns={"index" : "id1"}).astype({"strand" : int, "connection1" : int, "connection2" : int})
-   expected_num_strands = topology_data["strand"].max()
-   return topology_data, expected_num_strands
+    topology = os.path.join(output_dir, "{}.top".format(target))
+    topology_data = pd.read_csv(topology, sep = " ", names = ["strand", "nucleotide", "connection1", "connection2"])
+    topology_data = topology_data.drop([0]).reset_index(drop = True)
+    topology_data = topology_data.reset_index()
+    topology_data = topology_data.rename(columns={"index" : "id1"}).astype({"strand" : int, "connection1" : int, "connection2" : int})
+    expected_num_strands = topology_data["strand"].max()
+    return topology_data, expected_num_strands
 
 
-# In[6]:
+# In[65]:
 
 
 def get_top_pos_data(data1, bonds_data):
@@ -79,7 +79,7 @@ def get_top_pos_data(data1, bonds_data):
     return newdata
 
 
-# In[7]:
+# In[66]:
 
 
 def add_id2_strand(data, topology_data):
@@ -92,7 +92,7 @@ def add_id2_strand(data, topology_data):
     return data
 
 
-# In[8]:
+# In[67]:
 
 
 def count_strands(top_pos_data, data_groupby):
@@ -101,7 +101,7 @@ def count_strands(top_pos_data, data_groupby):
     return id2_strands_num
 
 
-# In[9]:
+# In[68]:
 
 
 def get_connected_strands_data(data):
@@ -157,11 +157,13 @@ def get_connected_strands_data(data):
 
     return return_data, actual_num_strands
 
-# In[10]:
+
+# In[69]:
 
 
 def create_connection_data(target, output_dir):
     output = run_output_bonds(target, output_dir)#ファイル名
+    print(output)
     #test
     output_bonds_data = get_bonds_data(output)
     lastconf_data = get_lastconf_data(output_dir, target)
@@ -171,20 +173,19 @@ def create_connection_data(target, output_dir):
     data = add_id2_strand(newdata, topology_data)#何か発生？
     connected_data, actual_num_strands = get_connected_strands_data(data)#e77error
     return connected_data, expected_num_strands, actual_num_strands
-                               
 
 
-# In[11]:
+# In[70]:
 
 
 def main():
-    connected_data, expected_num_strands, actual_num_strands = create_connection_data(target = "e617")#test
+    connected_data, expected_num_strands, actual_num_strands = create_connection_data(target = "e0", output_dir = "./sim_result_peppercorn_result1_1")#test
     print(connected_data)
     print("expected number of strands : ", expected_num_strands)
     print("actual number of strands : ", actual_num_strands)
 
 
-# In[12]:
+# In[71]:
 
 
 if __name__ == "__main__":

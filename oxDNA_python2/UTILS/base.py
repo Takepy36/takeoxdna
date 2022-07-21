@@ -1501,7 +1501,10 @@ class System(object):
         commands.append ("setattr m stickScale 0.6 #0")
 
         # e per il momento ci accontentiamo
-        chimera_file = filename.split(".")[0]
+        print("base.py debag filename : ", filename)
+        #chimera_file = filename.split(".")[0]
+        chimera_file = filename.replace(".dat.pdb", "")
+        print("base.py debag chimera_file : ", chimera_file)
         f = open (chimera_file + ".com", "w")
         for c in commands:
             #print c

@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
 
 		OX_DEBUG("Running");
 		OX_LOG(Logger::LOG_INFO, "Starting analysis");
-		myanalysis.analysis();//何かが起こった？
+		myanalysis.analysis();
 
 		OX_LOG(Logger::LOG_INFO, "END OF THE ANALYSIS, everything went OK!");
 	}

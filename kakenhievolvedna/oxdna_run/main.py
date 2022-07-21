@@ -269,8 +269,12 @@ def make_pdb(target, output_oxdna_dir, oxdna_path = "../../oxDNA_python2/UTILS")
     topology_file = os.path.join(output_oxdna_dir, target + ".top")
     traj2chimera_file = os.path.join(oxdna_path, "traj2chimera.py")
     executable = ["python2", traj2chimera_file, trajectory_file, topology_file]
-    sp.run(executable, stdout = sp.DEVNULL, stderr = sp.DEVNULL)
-    
+
+    logfile = os.path.join(output_oxdna_dir, target + "_chimera_log.txt")
+    with open(logfile, 'w') as fp:
+        sp.run(executable, stdout = fp, stderr = fp)
+    fp.close()
+
 def simulate(num, data, input_data, str_a, str_b, str_a_star, str_b_star, tup, output_folder, output_ATGC_folder):
     print("simuration start\n")
     line = data[num]

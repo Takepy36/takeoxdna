@@ -15,17 +15,29 @@ RUN cd /home/user && git clone https://bitbucket.org/leo-cazenille/kakenhievolve
 
 RUN pip install --upgrade cython && pip3 install --upgrade cython
 
+RUN apt-get -y install python-tk 
+RUN apt-get -y install libgl1-mesa-dev
+RUN apt install -y subversion 
+RUN apt-get install pkg-config 
+RUN apt install -y gcc 
+RUN apt-get -y install \
+    clang \
+    clang-format \
+    make \
+    cmake
+
 # Install peppercorn
 RUN \
-    pip install mpmath==0.19 numpy pybind11 scipy sympy==1.2 networkx matplotlib==2.2.4 && \
-    pip3 install tqdm colorama psutil parse powerlaw networkx matplotlib==2.2.4 seaborn graphviz pydot && \
-    pip3 install -U qdpy==0.1.0 && \
-    git clone https://github.com/leo-cazenille/peppercornenumerator.git && \
+    pip3 install vtk pybind11 pyvista tqdm colorama psutil parse powerlaw networkx matplotlib==2.2.4 seaborn graphviz pydot && \
+    pip3 install qdpy==0.1.0 && \
+    #    pip3 install -U qdpy==0.1.0 && \
+    pip install mpmath==0.19 numpy scipy sympy==1.2 networkx matplotlib==2.2.4 && \
+    git clone https://github.com/leo-cazenille/peppercornenumerator.git && \ 
     cd /peppercornenumerator && python2 setup.py install
+
+ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/lib/python3.7/dist-packages/vtk
 #RUN \
-#    pip3 install -U -r /home/user/kakenhievolvedna/requirements.txt
-
-
+#    pip3 install -U -r /home/user/kakenhievolvedna/requirements.tx
 # Install nupack
 COPY nupack3.2.2.tar.gz /
 RUN \
@@ -38,9 +50,15 @@ RUN \
 
 # Prepare for entrypoint execution
 #CMD ["/bin/bash"]
-ENTRYPOINT ["/home/user/kakenhievolvedna/entrypoint.sh"]
+
+#ENTRYPOINT cd /home/user/kakenhievolvedna2/oxdna_run ; /usr/bin/python3.7 -u /home/user/kakenhievolvedna2/oxdna_run/get_output_pilfile.py
+ENTRYPOINT cd /home/user/kakenhievolvedna2 ; ./scripts/runAllExpes.sh
+
+
 #CMD ["1000", "normal"]
 
 # MODELINE	"{{{1
 # vim:expandtab:softtabstop=4:shiftwidth=4:fileencoding=utf-8
 # vim:foldmethod=marker
+
+#コンテナから出ても継続されるようにentrypointを設定する。コンテナには入らない

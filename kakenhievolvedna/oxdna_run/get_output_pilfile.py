@@ -4,9 +4,7 @@
 # In[1]:
 
 
-import os
 import shutil
-import re
 import glob
 import subprocess as sp
 import config as cfg
@@ -30,7 +28,7 @@ all_results_correction= get_result_dir_path(all_results_dir)#結果ファイル�
 # In[3]:
 
 
-all_results_correction
+#display(all_results_correction)
 
 
 # In[4]:
@@ -43,7 +41,7 @@ def simplify_dirname(dirlist, parent_dirname):
         counter = counter + 1
         print("old_filename : ", dirname)
         print("new filename : ", parent_dirname + "/peppercorn_result"+str(counter))
-        os.rename(dirname, parent_dirname +"/peppercorn_result"+str(counter))
+        shutil.move(dirname, parent_dirname +"/peppercorn_result"+str(counter))
     dirlist = get_result_dir_path(parent_dirname)
     print("directory name was modified : \n", dirlist)
     return dirlist
@@ -60,7 +58,7 @@ def cut_parent_dir(filepath, parent_dir):
 #cut_parent_dir("../results/output.pil", "../results")
 
 
-# In[6]:
+# In[ ]:
 
 
 for results_dir_path in all_results_correction:
@@ -101,7 +99,7 @@ for results_dir_path in all_results_correction:
             shutil.copy(result_file, output_folder)
 
         print("実行コマンド：")
-        display(executable)
+        #display(executable)
         
     print("-----------------------------sim : {} end--------------------------------".format(results_dir_name))
 

@@ -49,7 +49,7 @@ protected:
 	
 	number _rcut, _sqr_rcut;
 
-	char _topology_filename[256];
+	char _topology_filename[512];
 
 public:
 	IBaseInteraction();
