@@ -4,12 +4,13 @@
 # In[1]:
 
 
+import os
 import shutil
+import re
 import glob
+import datetime
 import subprocess as sp
 import config as cfg
-
-all_results_dir = "../results"
 
 
 # In[2]:
@@ -18,38 +19,11 @@ all_results_dir = "../results"
 #条件ごとのpeppercorn実行結果のディレクトリ一覧を"パス名で"得る
 def get_result_dir_path(all_results_dir):
     peppercorn_results = glob.glob("{}/peppercorn*".format(all_results_dir))
-    #print_lit(peppercorn_results)
     return peppercorn_results
     #output : list of "resluts/(peppercorn output libraries)"
-    
-all_results_correction= get_result_dir_path(all_results_dir)#結果ファイルのフォルダ名
 
 
 # In[3]:
-
-
-#display(all_results_correction)
-
-
-# In[4]:
-
-
-#ディレクトリ一覧を受け取り、連番による簡略な名前にする
-def simplify_dirname(dirlist, parent_dirname):
-    counter = 0
-    for dirname in dirlist:
-        counter = counter + 1
-        print("old_filename : ", dirname)
-        print("new filename : ", parent_dirname + "/peppercorn_result"+str(counter))
-        shutil.move(dirname, parent_dirname +"/peppercorn_result"+str(counter))
-    dirlist = get_result_dir_path(parent_dirname)
-    print("directory name was modified : \n", dirlist)
-    return dirlist
-
-simplify_dirname(all_results_correction, "../results")
-
-
-# In[5]:
 
 
 def cut_parent_dir(filepath, parent_dir):
@@ -58,68 +32,69 @@ def cut_parent_dir(filepath, parent_dir):
 #cut_parent_dir("../results/output.pil", "../results")
 
 
-# In[ ]:
+# In[4]:
 
 
-for results_dir_path in all_results_correction:
+def sim_all_results_dir(all_results_dir = "../results"):
     
-    results_dir_name = cut_parent_dir(results_dir_path, all_results_dir)
-    #results/<ある条件でのpeppercorn実行結果ディレクトリ> の１つ
-    print("ライブラリパス：", results_dir_path, "\n")
-    print("ライブラリ名：", results_dir_name, "\n")
+    results_path_list= get_result_dir_path(all_results_dir)
+    print("results_path_list :" , results_path_list)
+
+    for results_dir_path in results_path_list:
     
-    print("-----------------------------sim : {} start--------------------------------".format(results_dir_name))
-    
+        results_dir_name = cut_parent_dir(results_dir_path, all_results_dir)
+        #results/<ある条件でのpeppercorn実行結果ディレクトリ> の１つ
+        print("ライブラリパス：", results_dir_path, "\n")
+        print("ライブラリ名：", results_dir_name, "\n")
+        print("-----------------------------sim : {} start--------------------------------".format(results_dir_name))
+        run_main_for_eachfiles(results_dir_path)
+        print("-----------------------------sim : {} end--------------------------------".format(results_dir_name))
+
+
+# In[5]:
+
+
+def run_main_for_eachfiles(results_dir_path):
+    #result_filesはresults内の複数ライブラリそれぞれにあるoutput***.pilのパスを抽出した一覧
+    d = {' ' :  '_', '.' :  '', ':' : '_'}
+    tbl = str.maketrans(d)
     result_files = glob.glob("{}/output*.pil".format(results_dir_path))
-    #print("result_files : ", result_files, "\n")
-    #result_filesは、
-    #results内の複数ライブラリそれぞれにあるoutput***.pilのパスを抽出した一覧
-    
-    #各実行条件dirにあるpilファイル全てについて：
-    
-    counter_filename = 0
-    
     for result_file in result_files:
-        counter_filename = counter_filename + 1
-        print("結果ファイル：", result_file, "\n")
-
-        output_folder = ("./sim_result_"+results_dir_name+"_"+str(counter_filename))
-        #output_folder = "sim_result" + str(counter_dirname)
-        print( "oxdna実行結果出力先：", output_folder, "\n")
-        
-    
-        exeprogram = "python3"
-        exefile = "./main.py"
-        executable = [exeprogram, exefile, result_file, output_folder]
-        print("executable : ", executable)
-        #python3 argv[0]:main.py argv[1]:<result pilfile> argv[2]:<output folder>
-        logfile = "log"+results_dir_name+".txt"
-        with open(logfile,"w") as log:
-            runned = sp.run(executable, stdout=log, stderr=sp.STDOUT, text=True)
-            shutil.copy(result_file, output_folder)
-
-        print("実行コマンド：")
-        #display(executable)
-        
-    print("-----------------------------sim : {} end--------------------------------".format(results_dir_name))
-
-    
+            print("結果ファイル：", result_file, "\n")
+            datetime_sim = str(datetime.datetime.now()).translate(tbl)
+            
+            output_folder = ("./sim_result_peppercorn_"+datetime_sim)# ??
+            print( "oxdna実行結果出力先：", output_folder, "\n")
 
 
-# In[ ]:
+            exeprogram = "python3"
+            exefile = "./main.py"
+            executable = [exeprogram, exefile, result_file, output_folder]
+            print("executable : ", executable)
+            #python3 argv[0]:main.py argv[1]:<result pilfile> argv[2]:<output folder>
+            logfile = datetime_sim+"_log.txt"
+            print("log : ",logfile)
+            with open(logfile,"w") as log:
+                runned = sp.run(executable, stdout=log, stderr=sp.STDOUT, text=True)
+                print(result_file)
+                shutil.copy(result_file, output_folder)
+
+            print("実行コマンド：")
+            display(executable)
+            new_logpath = shutil.move(logfile, output_folder+"/"+logfile)
+            print(new_logpath)
 
 
+# In[6]:
 
 
-
-# In[ ]:
-
-
-
+def main():
+    sim_all_results_dir()
 
 
 # In[ ]:
 
 
-
+if __name__ == "__main__":
+    main()
 

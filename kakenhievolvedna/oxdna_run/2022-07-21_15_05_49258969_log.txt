@@ -1,0 +1,1881 @@
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  10  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1), ('b', -1)] 
+
+target :  e0
+making trap file... 
+block :  [('b*', 0), ('b', 0), ('a*', -1), ('b', -1)]
+[['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b', -1, 20, 26]]
+domain_list :  [['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b', -1, 20, 26]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13
+2     a*   -1           14         19
+3      b   -1           20         26
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13
+{0: [0, 1]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13 
+
+index :  0   13
+created :  [['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b', -1, 20, 26]]
+running generate_sa.py:  e0
+created: top and conf : e0
+creating oxDNA input file.... :  e0
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e0_input_relax_1e5
+running oxdna... :  e0
+searching the overflow... : e0
+oxDNA completed :  e0 
+creating pdb file....
+e0 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e0_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e0_output_bonds.txt
+e0 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  6.883221765923998
+volume of cube:  15.877952194307593
+e0 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', -1)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', -1)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', -1)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', -1), ('a*', -1)] 
+
+index, character :  10  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', -1), ('a*', -1), ('b', 0)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('b', -1), ('a*', -1), ('b', 0)] 
+
+target :  e1
+making trap file... 
+block :  [('b*', 0), ('b', -1), ('a*', -1), ('b', 0)]
+[['b*', 0, 0, 6], ['b', -1, 7, 13], ['a*', -1, 14, 19], ['b', 0, 20, 26]]
+domain_list :  [['b*', 0, 0, 6], ['b', -1, 7, 13], ['a*', -1, 14, 19], ['b', 0, 20, 26]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b   -1            7         13
+2     a*   -1           14         19
+3      b    0           20         26
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+3      b    0           20         26
+{0: [0, 3]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+3      b    0           20         26 
+
+index :  0   26
+created :  [['b*', 0, 0, 6], ['b', -1, 7, 13], ['a*', -1, 14, 19], ['b', 0, 20, 26]]
+running generate_sa.py:  e1
+created: top and conf : e1
+creating oxDNA input file.... :  e1
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e1_input_relax_1e5
+running oxdna... :  e1
+searching the overflow... : e1
+oxDNA completed :  e1 
+creating pdb file....
+e1 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e1_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e1_output_bonds.txt
+e1 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  8.431912515938446
+volume of cube:  35.69723862752331
+e1 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  10  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  11  ,  *
+accumulate :  ['b', '*']
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  12  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1), ('b*', -1)] 
+
+target :  e6
+making trap file... 
+block :  [('b*', 0), ('b', 0), ('a*', -1), ('b*', -1)]
+[['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', -1, 20, 26]]
+domain_list :  [['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', -1, 20, 26]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13
+2     a*   -1           14         19
+3     b*   -1           20         26
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13
+{0: [0, 1]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13 
+
+index :  0   13
+created :  [['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', -1, 20, 26]]
+running generate_sa.py:  e6
+created: top and conf : e6
+creating oxDNA input file.... :  e6
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e6_input_relax_1e5
+running oxdna... :  e6
+searching the overflow... : e6
+oxDNA completed :  e6 
+creating pdb file....
+e6 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e6_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e6_output_bonds.txt
+e6 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  12.27960109000251
+volume of cube:  129.63033473598705
+e6 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,   
+accumulate :  []
+current_strand :  [('b*', -1)] 
+
+index, character :  4  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', -1)] 
+
+index, character :  5  ,  (
+accumulate :  []
+current_strand :  [('b*', -1), ('b', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', -1), ('b', 0)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', -1), ('b', 0)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', -1), ('b', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b*', -1), ('b', 0), ('a*', -1)] 
+
+index, character :  10  ,  )
+accumulate :  []
+current_strand :  [('b*', -1), ('b', 0), ('a*', -1), ('b*', 0)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('b*', -1), ('b', 0), ('a*', -1), ('b*', 0)] 
+
+target :  e7
+making trap file... 
+block :  [('b*', -1), ('b', 0), ('a*', -1), ('b*', 0)]
+[['b*', -1, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 0, 20, 26]]
+domain_list :  [['b*', -1, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 0, 20, 26]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*   -1            0          6
+1      b    0            7         13
+2     a*   -1           14         19
+3     b*    0           20         26
+connected_df : 
+   domain  num  start_index  end_index
+1      b    0            7         13
+3     b*    0           20         26
+{0: [1, 3]}
+roop 0
+group:
+   domain  num  start_index  end_index
+1      b    0            7         13
+3     b*    0           20         26 
+
+index :  7   26
+created :  [['b*', -1, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 0, 20, 26]]
+running generate_sa.py:  e7
+created: top and conf : e7
+creating oxDNA input file.... :  e7
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e7_input_relax_1e5
+running oxdna... :  e7
+searching the overflow... : e7
+oxDNA completed :  e7 
+creating pdb file....
+e7 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e7_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e7_output_bonds.txt
+e7 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  11.290977890478151
+volume of cube:  35.91885701857403
+e7 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,   
+accumulate :  []
+current_strand :  [('b', -1)] 
+
+index, character :  3  ,  a
+accumulate :  ['a']
+current_strand :  [('b', -1)] 
+
+index, character :  4  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', -1)] 
+
+index, character :  5  ,  (
+accumulate :  []
+current_strand :  [('b', -1), ('a*', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b', -1), ('a*', 0)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b', -1), ('a*', 0)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', -1), ('a*', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b', -1), ('a*', 0), ('a*', -1)] 
+
+index, character :  10  ,  )
+accumulate :  []
+current_strand :  [('b', -1), ('a*', 0), ('a*', -1), ('a', 0)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('b', -1), ('a*', 0), ('a*', -1), ('a', 0)] 
+
+target :  e12
+making trap file... 
+block :  [('b', -1), ('a*', 0), ('a*', -1), ('a', 0)]
+[['b', -1, 0, 6], ['a*', 0, 7, 12], ['a*', -1, 13, 18], ['a', 0, 19, 24]]
+domain_list :  [['b', -1, 0, 6], ['a*', 0, 7, 12], ['a*', -1, 13, 18], ['a', 0, 19, 24]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0      b   -1            0          6
+1     a*    0            7         12
+2     a*   -1           13         18
+3      a    0           19         24
+connected_df : 
+   domain  num  start_index  end_index
+1     a*    0            7         12
+3      a    0           19         24
+{0: [1, 3]}
+roop 0
+group:
+   domain  num  start_index  end_index
+1     a*    0            7         12
+3      a    0           19         24 
+
+index :  7   24
+created :  [['b', -1, 0, 6], ['a*', 0, 7, 12], ['a*', -1, 13, 18], ['a', 0, 19, 24]]
+running generate_sa.py:  e12
+created: top and conf : e12
+creating oxDNA input file.... :  e12
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e12_input_relax_1e5
+running oxdna... :  e12
+searching the overflow... : e12
+oxDNA completed :  e12 
+creating pdb file....
+e12 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e12_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e12_output_bonds.txt
+e12 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  8.83137990906521
+volume of cube:  18.51256022177928
+e12 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,   
+accumulate :  []
+current_strand :  [('b', -1)] 
+
+index, character :  3  ,  a
+accumulate :  ['a']
+current_strand :  [('b', -1)] 
+
+index, character :  4  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', -1)] 
+
+index, character :  5  ,   
+accumulate :  []
+current_strand :  [('b', -1), ('a*', -1)] 
+
+index, character :  6  ,  a
+accumulate :  ['a']
+current_strand :  [('b', -1), ('a*', -1)] 
+
+index, character :  7  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', -1), ('a*', -1)] 
+
+index, character :  8  ,  (
+accumulate :  []
+current_strand :  [('b', -1), ('a*', -1), ('a*', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b', -1), ('a*', -1), ('a*', 0)] 
+
+index, character :  10  ,  )
+accumulate :  []
+current_strand :  [('b', -1), ('a*', -1), ('a*', 0), ('a', 0)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('b', -1), ('a*', -1), ('a*', 0), ('a', 0)] 
+
+target :  e13
+making trap file... 
+block :  [('b', -1), ('a*', -1), ('a*', 0), ('a', 0)]
+[['b', -1, 0, 6], ['a*', -1, 7, 12], ['a*', 0, 13, 18], ['a', 0, 19, 24]]
+domain_list :  [['b', -1, 0, 6], ['a*', -1, 7, 12], ['a*', 0, 13, 18], ['a', 0, 19, 24]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0      b   -1            0          6
+1     a*   -1            7         12
+2     a*    0           13         18
+3      a    0           19         24
+connected_df : 
+   domain  num  start_index  end_index
+2     a*    0           13         18
+3      a    0           19         24
+{0: [2, 3]}
+roop 0
+group:
+   domain  num  start_index  end_index
+2     a*    0           13         18
+3      a    0           19         24 
+
+index :  13   24
+created :  [['b', -1, 0, 6], ['a*', -1, 7, 12], ['a*', 0, 13, 18], ['a', 0, 19, 24]]
+running generate_sa.py:  e13
+created: top and conf : e13
+creating oxDNA input file.... :  e13
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e13_input_relax_1e5
+running oxdna... :  e13
+searching the overflow... : e13
+oxDNA completed :  e13 
+creating pdb file....
+e13 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e13_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e13_output_bonds.txt
+e13 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  5.518738126285205
+volume of cube:  11.363712177803798
+e13 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  a
+accumulate :  ['a']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['a', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('a*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('a*', 0)] 
+
+index, character :  5  ,  a
+accumulate :  ['a']
+current_strand :  [('a*', 0)] 
+
+index, character :  6  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('a*', 0)] 
+
+index, character :  7  ,   
+accumulate :  []
+current_strand :  [('a*', 0), ('a*', -1)] 
+
+index, character :  8  ,  )
+accumulate :  []
+current_strand :  [('a*', 0), ('a*', -1), ('a', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('a*', 0), ('a*', -1), ('a', 0)] 
+
+index, character :  10  ,  b
+accumulate :  ['b']
+current_strand :  [('a*', 0), ('a*', -1), ('a', 0)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('a*', 0), ('a*', -1), ('a', 0), ('b', -1)] 
+
+target :  e19
+making trap file... 
+block :  [('a*', 0), ('a*', -1), ('a', 0), ('b', -1)]
+[['a*', 0, 0, 5], ['a*', -1, 6, 11], ['a', 0, 12, 17], ['b', -1, 18, 24]]
+domain_list :  [['a*', 0, 0, 5], ['a*', -1, 6, 11], ['a', 0, 12, 17], ['b', -1, 18, 24]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     a*    0            0          5
+1     a*   -1            6         11
+2      a    0           12         17
+3      b   -1           18         24
+connected_df : 
+   domain  num  start_index  end_index
+0     a*    0            0          5
+2      a    0           12         17
+{0: [0, 2]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     a*    0            0          5
+2      a    0           12         17 
+
+index :  0   17
+created :  [['a*', 0, 0, 5], ['a*', -1, 6, 11], ['a', 0, 12, 17], ['b', -1, 18, 24]]
+running generate_sa.py:  e19
+created: top and conf : e19
+creating oxDNA input file.... :  e19
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e19_input_relax_1e5
+running oxdna... :  e19
+searching the overflow... : e19
+oxDNA completed :  e19 
+creating pdb file....
+e19 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e19_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e19_output_bonds.txt
+e19 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  7.6667209558810345
+volume of cube:  41.44728966935015
+e19 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  a
+accumulate :  ['a']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['a', '*']
+current_strand :  [] 
+
+index, character :  3  ,   
+accumulate :  []
+current_strand :  [('a*', -1)] 
+
+index, character :  4  ,  a
+accumulate :  ['a']
+current_strand :  [('a*', -1)] 
+
+index, character :  5  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('a*', -1)] 
+
+index, character :  6  ,  (
+accumulate :  []
+current_strand :  [('a*', -1), ('a*', 0)] 
+
+index, character :  7  ,   
+accumulate :  []
+current_strand :  [('a*', -1), ('a*', 0)] 
+
+index, character :  8  ,  )
+accumulate :  []
+current_strand :  [('a*', -1), ('a*', 0), ('a', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('a*', -1), ('a*', 0), ('a', 0)] 
+
+index, character :  10  ,  b
+accumulate :  ['b']
+current_strand :  [('a*', -1), ('a*', 0), ('a', 0)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('a*', -1), ('a*', 0), ('a', 0), ('b', -1)] 
+
+target :  e20
+making trap file... 
+block :  [('a*', -1), ('a*', 0), ('a', 0), ('b', -1)]
+[['a*', -1, 0, 5], ['a*', 0, 6, 11], ['a', 0, 12, 17], ['b', -1, 18, 24]]
+domain_list :  [['a*', -1, 0, 5], ['a*', 0, 6, 11], ['a', 0, 12, 17], ['b', -1, 18, 24]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     a*   -1            0          5
+1     a*    0            6         11
+2      a    0           12         17
+3      b   -1           18         24
+connected_df : 
+   domain  num  start_index  end_index
+1     a*    0            6         11
+2      a    0           12         17
+{0: [1, 2]}
+roop 0
+group:
+   domain  num  start_index  end_index
+1     a*    0            6         11
+2      a    0           12         17 
+
+index :  6   17
+created :  [['a*', -1, 0, 5], ['a*', 0, 6, 11], ['a', 0, 12, 17], ['b', -1, 18, 24]]
+running generate_sa.py:  e20
+created: top and conf : e20
+creating oxDNA input file.... :  e20
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e20_input_relax_1e5
+running oxdna... :  e20
+searching the overflow... : e20
+oxDNA completed :  e20 
+creating pdb file....
+e20 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e20_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e20_output_bonds.txt
+e20 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  6.727512455996352
+volume of cube:  27.075943813769317
+e20 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1)] 
+
+index, character :  7  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1), ('b', 0)] 
+
+index, character :  8  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1), ('b', 0)] 
+
+index, character :  9  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0), ('a', -1), ('b', 0)] 
+
+index, character :  10  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1), ('b', 0), ('b', -1)] 
+
+target :  e26
+making trap file... 
+block :  [('b*', 0), ('a', -1), ('b', 0), ('b', -1)]
+[['b*', 0, 0, 6], ['a', -1, 7, 12], ['b', 0, 13, 19], ['b', -1, 20, 26]]
+domain_list :  [['b*', 0, 0, 6], ['a', -1, 7, 12], ['b', 0, 13, 19], ['b', -1, 20, 26]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      a   -1            7         12
+2      b    0           13         19
+3      b   -1           20         26
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+2      b    0           13         19
+{0: [0, 2]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+2      b    0           13         19 
+
+index :  0   19
+created :  [['b*', 0, 0, 6], ['a', -1, 7, 12], ['b', 0, 13, 19], ['b', -1, 20, 26]]
+running generate_sa.py:  e26
+created: top and conf : e26
+creating oxDNA input file.... :  e26
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e26_input_relax_1e5
+running oxdna... :  e26
+searching the overflow... : e26
+oxDNA completed :  e26 
+creating pdb file....
+e26 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e26_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e26_output_bonds.txt
+e26 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  9.64746438989564
+volume of cube:  30.112905415447873
+e26 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1)] 
+
+index, character :  7  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0), ('a', -1)] 
+
+index, character :  8  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1), ('b', -1)] 
+
+index, character :  9  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1), ('b', -1), ('b', 0)] 
+
+index, character :  10  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('a', -1), ('b', -1), ('b', 0)] 
+
+target :  e27
+making trap file... 
+block :  [('b*', 0), ('a', -1), ('b', -1), ('b', 0)]
+[['b*', 0, 0, 6], ['a', -1, 7, 12], ['b', -1, 13, 19], ['b', 0, 20, 26]]
+domain_list :  [['b*', 0, 0, 6], ['a', -1, 7, 12], ['b', -1, 13, 19], ['b', 0, 20, 26]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      a   -1            7         12
+2      b   -1           13         19
+3      b    0           20         26
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+3      b    0           20         26
+{0: [0, 3]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+3      b    0           20         26 
+
+index :  0   26
+created :  [['b*', 0, 0, 6], ['a', -1, 7, 12], ['b', -1, 13, 19], ['b', 0, 20, 26]]
+running generate_sa.py:  e27
+created: top and conf : e27
+creating oxDNA input file.... :  e27
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e27_input_relax_1e5
+running oxdna... :  e27
+searching the overflow... : e27
+oxDNA completed :  e27 
+creating pdb file....
+e27 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e27_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e27_output_bonds.txt
+e27 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  11.409446759860103
+volume of cube:  83.71132757349153
+e27 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  10  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  11  ,  *
+accumulate :  ['b', '*']
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  12  ,  (
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1), ('b*', 1)] 
+
+index, character :  13  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1), ('b*', 1)] 
+
+index, character :  14  ,  +
+accumulate :  []
+current_strand :  [] 
+
+index, character :  15  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  16  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  17  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  18  ,  (
+accumulate :  []
+current_strand :  [('b*', 2)] 
+
+index, character :  19  ,   
+accumulate :  []
+current_strand :  [('b*', 2)] 
+
+index, character :  20  ,  )
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  21  ,   
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  22  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  23  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  24  ,   
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1)] 
+
+index, character :  25  ,  )
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1), ('b', 1)] 
+
+index, character :  26  ,  
+
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1), ('b', 1)] 
+
+target :  e36
+making trap file... 
+block :  [('b*', 0), ('b', 0), ('a*', -1), ('b*', 1)]
+[['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26]]
+block :  [('b*', 2), ('b', 2), ('a*', -1), ('b', 1)]
+[['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26], ['b*', 2, 27, 33], ['b', 2, 34, 40], ['a*', -1, 41, 46], ['b', 1, 47, 53]]
+domain_list :  [['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26], ['b*', 2, 27, 33], ['b', 2, 34, 40], ['a*', -1, 41, 46], ['b', 1, 47, 53]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13
+2     a*   -1           14         19
+3     b*    1           20         26
+4     b*    2           27         33
+5      b    2           34         40
+6     a*   -1           41         46
+7      b    1           47         53
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13
+3     b*    1           20         26
+4     b*    2           27         33
+5      b    2           34         40
+7      b    1           47         53
+{0: [0, 1], 1: [3, 7], 2: [4, 5]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    0            7         13 
+
+index :  0   13
+roop 1
+group:
+   domain  num  start_index  end_index
+3     b*    1           20         26
+7      b    1           47         53 
+
+index :  20   53
+roop 2
+group:
+   domain  num  start_index  end_index
+4     b*    2           27         33
+5      b    2           34         40 
+
+index :  27   40
+created :  [['b*', 0, 0, 6], ['b', 0, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26], ['b*', 2, 27, 33], ['b', 2, 34, 40], ['a*', -1, 41, 46], ['b', 1, 47, 53]]
+running generate_sa.py:  e36
+created: top and conf : e36
+creating oxDNA input file.... :  e36
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e36_input_relax_1e5
+running oxdna... :  e36
+searching the overflow... : e36
+overflow found:  e36
+E = 2.01440406792479e+23 5182374341397.17 2.01440406787296e+23
+
+running oxdna... :  e36
+searching the overflow... : e36
+oxDNA completed :  e36 
+creating pdb file....
+e36 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e36_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e36_output_bonds.txt
+e36 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  16.22215460808854
+volume of cube:  34.55019651640227
+e36 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0)] 
+
+index, character :  6  ,  (
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 1)] 
+
+index, character :  7  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 1)] 
+
+index, character :  8  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', 1)] 
+
+index, character :  9  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', 1)] 
+
+index, character :  10  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 1), ('a*', -1)] 
+
+index, character :  11  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 1), ('a*', -1), ('b*', 1)] 
+
+index, character :  12  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 1), ('a*', -1), ('b*', 1)] 
+
+index, character :  13  ,  +
+accumulate :  []
+current_strand :  [] 
+
+index, character :  14  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  15  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  16  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  17  ,  (
+accumulate :  []
+current_strand :  [('b*', 2)] 
+
+index, character :  18  ,   
+accumulate :  []
+current_strand :  [('b*', 2)] 
+
+index, character :  19  ,  )
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  20  ,   
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  21  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  22  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  23  ,   
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1)] 
+
+index, character :  24  ,  )
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1), ('b', 0)] 
+
+index, character :  25  ,  
+
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1), ('b', 0)] 
+
+target :  e37
+making trap file... 
+block :  [('b*', 0), ('b', 1), ('a*', -1), ('b*', 1)]
+[['b*', 0, 0, 6], ['b', 1, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26]]
+block :  [('b*', 2), ('b', 2), ('a*', -1), ('b', 0)]
+[['b*', 0, 0, 6], ['b', 1, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26], ['b*', 2, 27, 33], ['b', 2, 34, 40], ['a*', -1, 41, 46], ['b', 0, 47, 53]]
+domain_list :  [['b*', 0, 0, 6], ['b', 1, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26], ['b*', 2, 27, 33], ['b', 2, 34, 40], ['a*', -1, 41, 46], ['b', 0, 47, 53]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    1            7         13
+2     a*   -1           14         19
+3     b*    1           20         26
+4     b*    2           27         33
+5      b    2           34         40
+6     a*   -1           41         46
+7      b    0           47         53
+connected_df : 
+   domain  num  start_index  end_index
+0     b*    0            0          6
+1      b    1            7         13
+3     b*    1           20         26
+4     b*    2           27         33
+5      b    2           34         40
+7      b    0           47         53
+{0: [0, 7], 1: [1, 3], 2: [4, 5]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0     b*    0            0          6
+7      b    0           47         53 
+
+index :  0   53
+roop 1
+group:
+   domain  num  start_index  end_index
+1      b    1            7         13
+3     b*    1           20         26 
+
+index :  7   26
+roop 2
+group:
+   domain  num  start_index  end_index
+4     b*    2           27         33
+5      b    2           34         40 
+
+index :  27   40
+created :  [['b*', 0, 0, 6], ['b', 1, 7, 13], ['a*', -1, 14, 19], ['b*', 1, 20, 26], ['b*', 2, 27, 33], ['b', 2, 34, 40], ['a*', -1, 41, 46], ['b', 0, 47, 53]]
+running generate_sa.py:  e37
+created: top and conf : e37
+creating oxDNA input file.... :  e37
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e37_input_relax_1e5
+running oxdna... :  e37
+searching the overflow... : e37
+overflow found:  e37
+E = 5.41140042122314e+127 1.89564550296892e+62 5.41140042122314e+127
+
+running oxdna... :  e37
+searching the overflow... : e37
+overflow found:  e37
+E = 1.60724130319601e+136 7.07200077363788e+68 1.60724130319601e+136
+
+running oxdna... :  e37
+searching the overflow... : e37
+overflow found:  e37
+E = 4.9813089286039e+181 5.84178017744051e+92 4.9813089286039e+181
+
+running oxdna... :  e37
+searching the overflow... : e37
+oxDNA completed :  e37 
+creating pdb file....
+e37 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e37_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e37_output_bonds.txt
+e37 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  12.595613910056004
+volume of cube:  31.613092217418945
+e37 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  (
+accumulate :  []
+current_strand :  [('b', 0)] 
+
+index, character :  3  ,   
+accumulate :  []
+current_strand :  [('b', 0)] 
+
+index, character :  4  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0)] 
+
+index, character :  5  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', 0)] 
+
+index, character :  6  ,  (
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  7  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  8  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  9  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  10  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1), ('a*', -1)] 
+
+index, character :  11  ,  )
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1), ('a*', -1), ('a', 1)] 
+
+index, character :  12  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1), ('a*', -1), ('a', 1)] 
+
+index, character :  13  ,  +
+accumulate :  []
+current_strand :  [] 
+
+index, character :  14  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  15  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  16  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  17  ,  (
+accumulate :  []
+current_strand :  [('b*', 2)] 
+
+index, character :  18  ,   
+accumulate :  []
+current_strand :  [('b*', 2)] 
+
+index, character :  19  ,  )
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  20  ,   
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  21  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  22  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 2), ('b', 2)] 
+
+index, character :  23  ,   
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1)] 
+
+index, character :  24  ,  )
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1), ('b*', 0)] 
+
+index, character :  25  ,  
+
+accumulate :  []
+current_strand :  [('b*', 2), ('b', 2), ('a*', -1), ('b*', 0)] 
+
+target :  e47
+making trap file... 
+block :  [('b', 0), ('a*', 1), ('a*', -1), ('a', 1)]
+[['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24]]
+block :  [('b*', 2), ('b', 2), ('a*', -1), ('b*', 0)]
+[['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24], ['b*', 2, 25, 31], ['b', 2, 32, 38], ['a*', -1, 39, 44], ['b*', 0, 45, 51]]
+domain_list :  [['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24], ['b*', 2, 25, 31], ['b', 2, 32, 38], ['a*', -1, 39, 44], ['b*', 0, 45, 51]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0      b    0            0          6
+1     a*    1            7         12
+2     a*   -1           13         18
+3      a    1           19         24
+4     b*    2           25         31
+5      b    2           32         38
+6     a*   -1           39         44
+7     b*    0           45         51
+connected_df : 
+   domain  num  start_index  end_index
+0      b    0            0          6
+1     a*    1            7         12
+3      a    1           19         24
+4     b*    2           25         31
+5      b    2           32         38
+7     b*    0           45         51
+{0: [0, 7], 1: [1, 3], 2: [4, 5]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0      b    0            0          6
+7     b*    0           45         51 
+
+index :  0   51
+roop 1
+group:
+   domain  num  start_index  end_index
+1     a*    1            7         12
+3      a    1           19         24 
+
+index :  7   24
+roop 2
+group:
+   domain  num  start_index  end_index
+4     b*    2           25         31
+5      b    2           32         38 
+
+index :  25   38
+created :  [['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24], ['b*', 2, 25, 31], ['b', 2, 32, 38], ['a*', -1, 39, 44], ['b*', 0, 45, 51]]
+running generate_sa.py:  e47
+created: top and conf : e47
+creating oxDNA input file.... :  e47
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e47_input_relax_1e5
+running oxdna... :  e47
+searching the overflow... : e47
+oxDNA completed :  e47 
+creating pdb file....
+e47 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e47_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e47_output_bonds.txt
+e47 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  10.650356513522246
+volume of cube:  44.54412538263925
+e47 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  (
+accumulate :  []
+current_strand :  [('b', 0)] 
+
+index, character :  3  ,   
+accumulate :  []
+current_strand :  [('b', 0)] 
+
+index, character :  4  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0)] 
+
+index, character :  5  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', 0)] 
+
+index, character :  6  ,  (
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  7  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  8  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  9  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', 0), ('a*', 1)] 
+
+index, character :  10  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1), ('a*', -1)] 
+
+index, character :  11  ,  )
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1), ('a*', -1), ('a', 1)] 
+
+index, character :  12  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', 1), ('a*', -1), ('a', 1)] 
+
+index, character :  13  ,  +
+accumulate :  []
+current_strand :  [] 
+
+index, character :  14  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  15  ,  )
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  16  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  17  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0)] 
+
+index, character :  18  ,  (
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 2)] 
+
+index, character :  19  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 2)] 
+
+index, character :  20  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', 2)] 
+
+index, character :  21  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', 2)] 
+
+index, character :  22  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 2), ('a*', -1)] 
+
+index, character :  23  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 2), ('a*', -1), ('b*', 2)] 
+
+index, character :  24  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 2), ('a*', -1), ('b*', 2)] 
+
+target :  e49
+making trap file... 
+block :  [('b', 0), ('a*', 1), ('a*', -1), ('a', 1)]
+[['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24]]
+block :  [('b*', 0), ('b', 2), ('a*', -1), ('b*', 2)]
+[['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24], ['b*', 0, 25, 31], ['b', 2, 32, 38], ['a*', -1, 39, 44], ['b*', 2, 45, 51]]
+domain_list :  [['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24], ['b*', 0, 25, 31], ['b', 2, 32, 38], ['a*', -1, 39, 44], ['b*', 2, 45, 51]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0      b    0            0          6
+1     a*    1            7         12
+2     a*   -1           13         18
+3      a    1           19         24
+4     b*    0           25         31
+5      b    2           32         38
+6     a*   -1           39         44
+7     b*    2           45         51
+connected_df : 
+   domain  num  start_index  end_index
+0      b    0            0          6
+1     a*    1            7         12
+3      a    1           19         24
+4     b*    0           25         31
+5      b    2           32         38
+7     b*    2           45         51
+{0: [0, 4], 1: [1, 3], 2: [5, 7]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0      b    0            0          6
+4     b*    0           25         31 
+
+index :  0   31
+roop 1
+group:
+   domain  num  start_index  end_index
+1     a*    1            7         12
+3      a    1           19         24 
+
+index :  7   24
+roop 2
+group:
+   domain  num  start_index  end_index
+5      b    2           32         38
+7     b*    2           45         51 
+
+index :  32   51
+created :  [['b', 0, 0, 6], ['a*', 1, 7, 12], ['a*', -1, 13, 18], ['a', 1, 19, 24], ['b*', 0, 25, 31], ['b', 2, 32, 38], ['a*', -1, 39, 44], ['b*', 2, 45, 51]]
+running generate_sa.py:  e49
+created: top and conf : e49
+creating oxDNA input file.... :  e49
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e49_input_relax_1e5
+running oxdna... :  e49
+searching the overflow... : e49
+overflow found:  e49
+E = 4.57581057710856e+160 2.54229987972667e+81 4.57581057710856e+160
+
+running oxdna... :  e49
+searching the overflow... : e49
+oxDNA completed :  e49 
+creating pdb file....
+e49 pdb file :completed 
+creating connection dataframe...
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e49_input_relax_1e5
+./sim_result_peppercorn_2022-07-21_15_05_49258969/e49_output_bonds.txt
+e49 connection_data: created dataframe 
+calcurating convex_hull and cube volume...
+/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/convexhull.py:32: MatplotlibDeprecationWarning: Axes3D(fig) adding itself to the figure is deprecated since 3.4. Pass the keyword argument auto_add_to_figure=False and use fig.add_axes(ax) to suppress this warning. The default value of auto_add_to_figure will change to False in mpl3.5 and True values will no longer work in 3.6.  This is consistent with other Axes classes.
+  ax = Axes3D(fig)
+volume of convex hull:  43.791605822305
+volume of cube:  122.23206162987354
+e49 : all simuration process were completed
+
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  (
+accumulate :  []
+current_strand :  [('b', 0)] 
+
+index, character :  3  ,   
+accumulate :  []
+current_strand :  [('b', 0)] 
+
+index, character :  4  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0)] 
+
+index, character :  5  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', -1)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0), ('a*', -1)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b', 0), ('a*', -1)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', -1), ('a*', -1)] 
+
+index, character :  10  ,  a
+accumulate :  ['a']
+current_strand :  [('b', 0), ('a*', -1), ('a*', -1)] 
+
+index, character :  11  ,   
+accumulate :  []
+current_strand :  [('b', 0), ('a*', -1), ('a*', -1), ('a', -1)] 
+
+index, character :  12  ,  +
+accumulate :  []
+current_strand :  [] 
+
+index, character :  13  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  14  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  15  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  16  ,  (
+accumulate :  []
+current_strand :  [('b*', 1)] 
+
+index, character :  17  ,   
+accumulate :  []
+current_strand :  [('b*', 1)] 
+
+index, character :  18  ,  )
+accumulate :  []
+current_strand :  [('b*', 1), ('b', 1)] 
+
+index, character :  19  ,   
+accumulate :  []
+current_strand :  [('b*', 1), ('b', 1)] 
+
+index, character :  20  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 1), ('b', 1)] 
+
+index, character :  21  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 1), ('b', 1)] 
+
+index, character :  22  ,   
+accumulate :  []
+current_strand :  [('b*', 1), ('b', 1), ('a*', -1)] 
+
+index, character :  23  ,  )
+accumulate :  []
+current_strand :  [('b*', 1), ('b', 1), ('a*', -1), ('b*', 0)] 
+
+index, character :  24  ,  
+
+accumulate :  []
+current_strand :  [('b*', 1), ('b', 1), ('a*', -1), ('b*', 0)] 
+
+target :  e50
+making trap file... 
+block :  [('b', 0), ('a*', -1), ('a*', -1), ('a', -1)]
+[['b', 0, 0, 6], ['a*', -1, 7, 12], ['a*', -1, 13, 18], ['a', -1, 19, 24]]
+block :  [('b*', 1), ('b', 1), ('a*', -1), ('b*', 0)]
+[['b', 0, 0, 6], ['a*', -1, 7, 12], ['a*', -1, 13, 18], ['a', -1, 19, 24], ['b*', 1, 25, 31], ['b', 1, 32, 38], ['a*', -1, 39, 44], ['b*', 0, 45, 51]]
+domain_list :  [['b', 0, 0, 6], ['a*', -1, 7, 12], ['a*', -1, 13, 18], ['a', -1, 19, 24], ['b*', 1, 25, 31], ['b', 1, 32, 38], ['a*', -1, 39, 44], ['b*', 0, 45, 51]] 
+
+domain_df : 
+   domain  num  start_index  end_index
+0      b    0            0          6
+1     a*   -1            7         12
+2     a*   -1           13         18
+3      a   -1           19         24
+4     b*    1           25         31
+5      b    1           32         38
+6     a*   -1           39         44
+7     b*    0           45         51
+connected_df : 
+   domain  num  start_index  end_index
+0      b    0            0          6
+4     b*    1           25         31
+5      b    1           32         38
+7     b*    0           45         51
+{0: [0, 7], 1: [4, 5]}
+roop 0
+group:
+   domain  num  start_index  end_index
+0      b    0            0          6
+7     b*    0           45         51 
+
+index :  0   51
+roop 1
+group:
+   domain  num  start_index  end_index
+4     b*    1           25         31
+5      b    1           32         38 
+
+index :  25   38
+created :  [['b', 0, 0, 6], ['a*', -1, 7, 12], ['a*', -1, 13, 18], ['a', -1, 19, 24], ['b*', 1, 25, 31], ['b', 1, 32, 38], ['a*', -1, 39, 44], ['b*', 0, 45, 51]]
+running generate_sa.py:  e50
+created: top and conf : e50
+creating oxDNA input file.... :  e50
+created:  ./sim_result_peppercorn_2022-07-21_15_05_49258969/e50_input_relax_1e5
+running oxdna... :  e50
+Traceback (most recent call last):
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 442, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 429, in main
+    make_output(data, output_folder, output_ATGC_folder)
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 393, in make_output
+    res = p.map(eval, range(head_index, end_index))
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/multiprocessing/pool.py", line 765, in get
+    self.wait(timeout)
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/multiprocessing/pool.py", line 762, in wait
+    self._event.wait(timeout)
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt

@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 442, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 423, in main
+    with open(sys.argv[1],'r') as file:#argv[1]はoutput***.pil
+IsADirectoryError: [Errno 21] Is a directory: '../results/peppercorntest'

@@ -1,0 +1,74 @@
+simuration start
+
+replace_parentheses() : start
+
+index, character :  0  ,   
+accumulate :  []
+current_strand :  [] 
+
+index, character :  1  ,  b
+accumulate :  ['b']
+current_strand :  [] 
+
+index, character :  2  ,  *
+accumulate :  ['b', '*']
+current_strand :  [] 
+
+index, character :  3  ,  (
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  4  ,   
+accumulate :  []
+current_strand :  [('b*', 0)] 
+
+index, character :  5  ,  )
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  6  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  7  ,  a
+accumulate :  ['a']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  8  ,  *
+accumulate :  ['a', '*']
+current_strand :  [('b*', 0), ('b', 0)] 
+
+index, character :  9  ,   
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  10  ,  b
+accumulate :  ['b']
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1)] 
+
+index, character :  11  ,  
+
+accumulate :  []
+current_strand :  [('b*', 0), ('b', 0), ('a*', -1), ('b', -1)] 
+
+target :  e0
+making trap file... 
+Process SpawnPoolWorker-1:
+Traceback (most recent call last):
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 442, in <module>
+    sys.exit(main(sys.argv))
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 429, in main
+    make_output(data, output_folder, output_ATGC_folder)
+  File "/Users/takepy/takeoxdna/kakenhievolvedna/oxdna_run/./main.py", line 393, in make_output
+    res = p.map(eval, range(head_index, end_index))
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/multiprocessing/pool.py", line 364, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/multiprocessing/pool.py", line 765, in get
+    self.wait(timeout)
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/multiprocessing/pool.py", line 762, in wait
+    self._event.wait(timeout)
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "/Users/takepy/.pyenv/versions/3.9.0/lib/python3.9/threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt
